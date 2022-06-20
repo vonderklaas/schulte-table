@@ -7,6 +7,7 @@ export const GameBoard = () => {
   const initialArr = Array.from({ length: 24 }, (_, i) => i + 1);
   const [table, setTable] = useState(initialArr);
   const [counter, setCounter] = useState(1);
+  const [misses, setMisses] = useState(0);
   const [isStarted, setIsStarted] = useState(false);
   const [isResults, setIsResults] = useState(false);
   const { time, start, pause, reset } = useTimer();
@@ -22,6 +23,7 @@ export const GameBoard = () => {
     start();
     setIsResults(false);
     setIsStarted(true);
+    setMisses(0);
     sortTable();
     insertMiddleEl();
   };
@@ -53,17 +55,19 @@ export const GameBoard = () => {
     if (attempt === counter) {
       setCounter(counter + 1);
       replaceElement(attempt);
+    } else {
+      setMisses(misses + 1);
     }
   };
 
   return (
-    <div>
+    <div className={styles.Game}>
       <button
         className={isStarted ? styles.ButtonDisabled : styles.Button}
         disabled={isStarted}
         onClick={startGame}
       >
-        Go
+        {isResults ? <span>Try again?</span> : <span>Start</span>}
       </button>
       {isStarted && (
         <div className={styles.Table}>
@@ -71,7 +75,7 @@ export const GameBoard = () => {
             return (
               <div onClick={handleClick} key={`${num}/${index}`}>
                 {num === 'null' ? (
-                  <div className={styles.elementRemoved}>{'🧩'}</div>
+                  <div className={styles.elementRemoved}>{'🍪'}</div>
                 ) : (
                   <div className={styles.elementAwaited}>{num}</div>
                 )}
@@ -82,13 +86,15 @@ export const GameBoard = () => {
       )}
       {isStarted && (
         <div className={styles.Timer}>
-          <p>{time} seconds</p>
+          <p>⏰ {time} seconds</p>
+          <p>Missed clicks {misses}</p>
         </div>
       )}
       {isResults && (
         <>
           <h3>Congratulations!</h3>
           <p>You finished in {time} seconds</p>
+          <p>Your have total {misses} missed clicks</p>
         </>
       )}
     </div>

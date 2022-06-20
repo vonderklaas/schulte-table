@@ -1,21 +1,26 @@
+.Game {
+  max-width: 1100px;
+  margin: 45px auto 50px auto;
+}
+
 .Table {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 520px;
+  max-width: 450px;
   flex-wrap: wrap;
   margin: 0 auto;
 }
 
 .elementRemoved,
 .elementAwaited {
-  border: 1px solid #f1f1f1;
-  width: 80px;
-  height: 100%;
-  font-size: 25px;
-  padding: 10px;
-  line-height: 50px;
+  border: 1px solid #9dd6df;
+  width: 65px;
+  height: 65px;
+  font-size: 20px;
+  padding: 5px;
+  line-height: 3.5;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -25,42 +30,40 @@
 }
 
 .elementRemoved {
-  background-color: #111;
+  background-color: #dfbb9d;
 }
 
 .elementAwaited {
-  background-color: #fff;
+  background-color: #f7e2d6;
 }
 
 .Timer {
-  margin-top: 100px;
-  font-size: 25px;
+  margin-top: 60px;
+  font-size: 18px;
+  text-align: left;
 }
 
 .Button {
   margin-bottom: 30px;
-  padding: 5px 25px;
-  font-size: 25px;
-  background-color: rosybrown;
-  box-shadow: 1px 2px 4px rosybrown;
+  padding: 10px 35px;
+  font-size: 20px;
+  background-color: #a084cf;
+  border-radius: 5px;
   color: #fff;
   border: none;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .ButtonDisabled {
   margin-bottom: 30px;
-  padding: 5px 25px;
-  font-size: 25px;
-  background-color: rosybrown;
-  box-shadow: 1px 2px 4px rosybrown;
-  color: #000;
+  padding: 10px 35px;
+  font-size: 20px;
+  background-color: #a084cf;
+  border-radius: 5px;
+  color: #fff;
   border: none;
   transition: all 0.3s;
+  cursor: not-allowed;
   opacity: 0.5;
-}
-
-.Button:hover {
-  box-shadow: 2px 2px 4px rosybrown;
-  cursor: pointer;
 }

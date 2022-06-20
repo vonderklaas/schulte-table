@@ -7,15 +7,12 @@ import { Link } from 'wouter';
 export const Navbar = () => {
   return (
     <header className={styles.Header}>
-      <h2>Shulte Tables</h2>
-      <nav className={styles.Navbar}>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
-        <Link href='/game'>
-          <a>Game</a>
-        </Link>
-      </nav>
+      <Link href='/'>
+        <h2>Shulte Tables</h2>
+      </Link>
+      <Link href='/game'>
+        <h2>Try it out!</h2>
+      </Link>
     </header>
   );
 };
