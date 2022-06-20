@@ -40,10 +40,10 @@ const App = () => {
             understand that this is how you can develop the ability to find all
             the numbers 2-3 times faster than with normal eye movement.
           </p>
-          <h1>Why Shulte Tables?</h1>
+          <h1>Why Schulte Tables?</h1>
           <ul className={styles.Options}>
             <li>Practice helps to develop concentration skills</li>
-            <li>Doing Shulte increases the amount of attention span</li>
+            <li>Doing Schulte increases the amount of attention span</li>
             <li>It helps to develop short-term visual memory</li>
             <li>Progressive expanding of peripheral vision</li>
           </ul>

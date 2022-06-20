@@ -8,10 +8,10 @@ export const Navbar = () => {
   return (
     <header className={styles.Header}>
       <Link href='/'>
-        <h2>Shulte Tables</h2>
+        <h2>Schulte Tables</h2>
       </Link>
       <Link href='/game'>
-        <h2>Try it out!</h2>
+        <h2>Play</h2>
       </Link>
     </header>
   );
