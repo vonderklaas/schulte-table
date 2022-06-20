@@ -1,3 +1,11 @@
 # react-schulte-tables
 
-This is a game, that contains most powerful tools to upgrade your brain abilities based on Schulte table. Made with help of Vite, React, Wouter
+Application where you can practice Schulte table to sharpen your attention and cognitive skills. I've made this app with help of React under Vite's configuration and some other small libraries
+
+# How to run it?
+
+Just go to the root folder, open the terminal and run
+
+`
+npm run dev
+`
