@@ -1,11 +1,18 @@
-# react-schulte-tables
+# Shulte Tables with React
 
-Application where you can practice Schulte table to sharpen your attention and cognitive skills. I've made this app with help of React under Vite's configuration and some other small libraries
 
-# How to run it?
+### Dependencies
 
-Just go to the root folder, open the terminal and run
+Go to the root folder and run
 
-`
+```
+npm i
+```
+
+### How to run?
+
+Go to the root folder, open the terminal and run
+
+```
 npm run dev
-`
+```
